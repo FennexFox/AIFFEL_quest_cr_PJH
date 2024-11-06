@@ -4,9 +4,18 @@
 
 
 # PRT(Peer Review Template)
-- [ ]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
+- [ㅇ]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
     - 문제에서 요구하는 최종 결과물이 첨부되었는지 확인
         - 중요! 해당 조건을 만족하는 부분을 캡쳐해 근거로 첨부
+     
+- ![image](https://github.com/user-attachments/assets/ca11fc21-4d94-4ec3-8394-e820aaf77b54)
+- 1번 결과물이 제대로 출력됨을 확인하였습니다.
+
+- ![image](https://github.com/user-attachments/assets/f954156f-bd1e-4add-afd9-a68e94c9de34)
+- 2번 결과물이 제대로 출력됨을 확인하였습니다.
+
+
+        
     
 - [ ]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
