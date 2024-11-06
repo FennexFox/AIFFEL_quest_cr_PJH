@@ -9,11 +9,11 @@
         - 중요! 해당 조건을 만족하는 부분을 캡쳐해 근거로 첨부
         - 
 ---
-- ![image](https://github.com/user-attachments/assets/ca11fc21-4d94-4ec3-8394-e820aaf77b54)
-- - 1번 결과물이 제대로 출력됨을 확인하였습니다.  
+![image](https://github.com/user-attachments/assets/ca11fc21-4d94-4ec3-8394-e820aaf77b54)
+1번 결과물이 제대로 출력됨을 확인하였습니다.  
 ---
-- ![image](https://github.com/user-attachments/assets/f954156f-bd1e-4add-afd9-a68e94c9de34)
-- - 2번 결과물이 제대로 출력됨을 확인하였습니다.
+![image](https://github.com/user-attachments/assets/f954156f-bd1e-4add-afd9-a68e94c9de34)
+2번 결과물이 제대로 출력됨을 확인하였습니다.
 ---
       
     
@@ -25,8 +25,14 @@
     - 주석을 보고 코드 이해가 잘 되었는지 확인
         - 중요! 잘 작성되었다고 생각되는 부분을 캡쳐해 근거로 첨부
      
-    - ![image](https://github.com/user-attachments/assets/bf8f9ba0-0dae-434b-a58e-ac9f3a981814)
-
+---
+![image](https://github.com/user-attachments/assets/f7c018d0-f9c2-4154-9c73-d4f1f6573be5)
+코드를 깔끔하게 보이게 하기위해 주석을 위에 모으신 의도는 확인하였는데요,
+제가 개인적으로 볼때 그 주석이 어느 부분인지 파악하기가 힘든 부분이 있는 것 같아요.
+---
+![image](https://github.com/user-attachments/assets/bf8f9ba0-0dae-434b-a58e-ac9f3a981814)
+해당 코드를 볼때 참고 할 수 있도록 주석을 넣어 주시면 좋을 듯 해요.
+---
      
      
 
