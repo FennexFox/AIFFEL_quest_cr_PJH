@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyOgRbbXifmM9X4wCUy10dY8",
+      "authorship_tag": "ABX9TyOoVE83l/0i0WpRT4zX3nG+",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -23,16 +23,31 @@
         "colab_type": "text"
       },
       "source": [
-        "<a href=\"https://colab.research.google.com/github/emily-park-0902/AIFFEL_quest_cr/blob/main/Python/SubQuest04/SubQuest04.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+        "<a href=\"https://colab.research.google.com/github/emily-park-0902/AIFFEL_quest_cr/blob/main/Python/SubQuest04\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
       ]
     },
     {
       "cell_type": "code",
       "execution_count": null,
       "metadata": {
-        "id": "Ejk3HXM-nIth"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ejk3HXM-nIth",
+        "outputId": "19ffdf9f-7797-4da3-c2c2-926b18bd8811"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "첫 번째 정수를 입력해 주세요: 1\n",
+            "두 번째 정수를 입력해 주세요: 3\n",
+            "연산자를 입력해 주세요: +\n",
+            "계산 결과: 4\n"
+          ]
+        }
+      ],
       "source": [
         "\"\"\"\n",
         "계산기 프로그램\n",
@@ -58,8 +73,8 @@
         "- Except 클래스를 상속받는 클래스.\n",
         "- 지원하지 않는 연산자에 대한 예외 처리를 위해 사용됩니다.\n",
         "\"\"\"\n",
-        "class OperatorError(Exception):\n",
-        "    pass\n",
+        "\n",
+        "\n",
         "\n",
         "def calculator():\n",
         "    while True:\n",
@@ -73,7 +88,7 @@
         "            if operator_input == \"/\" and second_num == \"0\":\n",
         "                raise(ZeroDivisionError)\n",
         "            if operator_input not in [\"+\", \"-\", \"*\", \"/\", \"**\"]:\n",
-        "                raise(OperatorError)\n",
+        "                raise(Exception)\n",
         "        except ValueError:\n",
         "            print(\"입력된 값은 정수가 아닙니다.\")\n",
         "        except OperatorError:\n",
