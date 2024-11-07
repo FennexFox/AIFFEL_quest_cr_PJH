@@ -1,20 +1,13 @@
 # AIFFEL Campus Online Code Peer Review Templete
-- 코더 : 박정현
-- 리뷰어 : 윤형석
+코더: 윤형석
+리뷰어: 박정현
 
 
 # PRT(Peer Review Template)
 - [ ]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
     - 문제에서 요구하는 최종 결과물이 첨부되었는지 확인
-        ```python
-            # 입력받은 정수에 대한 계산식
-            first_num = int(first_num)
-            second_num = int(second_num)
-            operator_dict = {"+": lambda x, y: x + y, "-": lambda x, y: x - y, "*": lambda x, y: x * y, "/": lambda x, y: x / y, "**": lambda x, y: math.pow(x, y)}
-            operator = operator_dict[operator_input]
-            res = operator(first_num, second_num)
-            print(f'계산 결과: {res}')
-        ```
+       문제의 요구사항을 충족하는 계산기 기능이 잘 구현되었습니다. 예외 처리를 통해 연산자와 입력값의 오류를 방지하는 코드가 포함되어 있습니다.
+        i[image02.png]
     
 - [ ]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
