@@ -1,0 +1,164 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPd47r/AuyZX7rwh5tHuDNJ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/emily-park-0902/AIFFEL_quest_cr/blob/main/Python/SubQuest02\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "79AO3BUhQXa7",
+        "outputId": "35d906b3-d60a-4377-a0b8-243e0b6c3b8f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "평행사변형의 넓이: 50\n",
+            "사다리꼴의 넓이: 45.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Shape:\n",
+        "    # 평행사변형의 넓이를 계산하는 메서드\n",
+        "    def area_of_parallelogram(self, base, height):\n",
+        "        return base * height\n",
+        "\n",
+        "    # 사다리꼴의 넓이를 계산하는 메서드\n",
+        "    def area_of_trapezoid(self, top_base, bottom_base, height):\n",
+        "        return (top_base + bottom_base) * height / 2\n",
+        "\n",
+        "# Shape 클래스 인스턴스 생성\n",
+        "shape = Shape()\n",
+        "\n",
+        "# 평행사변형 넓이 계산\n",
+        "print(\"평행사변형의 넓이:\", shape.area_of_parallelogram(10, 5))\n",
+        "\n",
+        "# 사다리꼴 넓이 계산\n",
+        "print(\"사다리꼴의 넓이:\", shape.area_of_trapezoid(8, 10, 5))\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Kiosk:\n",
+        "    def __init__(self):\n",
+        "        self.menu = {\"아메리카노\": 3000, \"카페라떼\": 4000, \"핫초코\": 3500}\n",
+        "        self.orders = []\n",
+        "\n",
+        "    # 주문 메서드 (여러 개의 메뉴를 한 번에 주문)\n",
+        "    def place_orders(self, items):\n",
+        "        for item in items:\n",
+        "            if item in self.menu:\n",
+        "                self.orders.append(item)\n",
+        "                print(f\"{item} 추가 주문 완료!\")\n",
+        "            else:\n",
+        "                print(f\"메뉴에 없는 항목입니다: {item}\")\n",
+        "\n",
+        "    # 결제 금액 계산 메서드\n",
+        "    def get_total(self):\n",
+        "        total = sum(self.menu[item] for item in self.orders)\n",
+        "        return total\n",
+        "\n",
+        "    # 영수증 출력 메서드\n",
+        "    def print_receipt(self):\n",
+        "        print(\"\\n주문 내역:\")\n",
+        "        for item in self.orders:\n",
+        "            print(f\"{item}: {self.menu[item]}원\")\n",
+        "        print(f\"\\n총 결제 금액: {self.get_total()}원\")\n",
+        "\n",
+        "# Kiosk 인스턴스 생성\n",
+        "kiosk = Kiosk()\n",
+        "\n",
+        "# 주문하기\n",
+        "kiosk.place_orders([\"아메리카노\", \"카페라떼\", \"핫초코\", \"에스프레소\"])\n",
+        "\n",
+        "# 영수증 출력\n",
+        "kiosk.print_receipt()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vLyB2w-fQ_Pu",
+        "outputId": "5e628160-6a9a-47f9-b778-e8d40402588b"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "아메리카노 추가 주문 완료!\n",
+            "카페라떼 추가 주문 완료!\n",
+            "핫초코 추가 주문 완료!\n",
+            "메뉴에 없는 항목입니다: 에스프레소\n",
+            "\n",
+            "주문 내역:\n",
+            "아메리카노: 3000원\n",
+            "카페라떼: 4000원\n",
+            "핫초코: 3500원\n",
+            "\n",
+            "총 결제 금액: 10500원\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def counter(func):\n",
+        "    count = 0\n",
+        "\n",
+        "    def wrapper(*args, **kwargs):\n",
+        "        nonlocal count\n",
+        "        count += 1\n",
+        "        print(f\"{func.__name__} 실행 횟수: {count}\")\n",
+        "        return func(*args, **kwargs)\n",
+        "\n",
+        "    return wrapper\n",
+        "\n",
+        "@counter\n",
+        "def greet():\n",
+        "    print(\"안녕하세요, AIFFEL!\")\n",
+        "\n",
+        "# 함수 호출\n",
+        "for _ in range(3):\n",
+        "    greet()\n"
+      ],
+      "metadata": {
+        "id": "nOSvznZLRJ-r"
+      },
+      "execution_count": 2,
+      "outputs": []
+    }
+  ]
+}
